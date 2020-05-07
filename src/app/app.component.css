@@ -1,0 +1,26 @@
+  .content{
+    border-style: dashed;
+  }
+  
+  .nav-bar{
+    height:70px;
+  }
+
+  .nav-elements{
+    height: 100%;
+    padding: 20px;
+    color: grey;
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  .nav-elements:hover{
+    border-bottom: solid #00e1ff;
+    color: #00e1ff;
+  }
+
+  .logo-text{
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 3px;
+  }
