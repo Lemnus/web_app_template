@@ -1,0 +1,16 @@
+.flexcontainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.line{
+    width: 100%;
+}
+
+.dark-bg{
+    background-color: #131316;
+}
+
+.beige-bg{
+    background-color: #f7f7f7;
+}
