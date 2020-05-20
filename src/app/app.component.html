@@ -1,27 +1,41 @@
-<!-- Toolbar -->
-<div class="container" role="navigation">
-  <div class="row nav-bar">
-    <div class="d-flex col-3 my-auto">  
-      <img
-      width="45"
-      height="30"
-      alt="Logo"
-      src="data:image/png;base64,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"
-    />     
-    <div class="d-inline my-auto"><p class="text-center d-inline ml-3 logo-text">K  E  T</p></div>   
-    </div>
-    <div class="col-2"></div>
-    <div class="d-flex col-7 h-100">
-        <div onclick="location.href='';" class="d-inline my-auto nav-elements">HOME</div>
-        <div onclick="location.href='#Services';" class="d-inline my-auto nav-elements">SERVICES</div>
-        <div onclick="location.href='#Portofolio';" class="d-inline my-auto nav-elements">PORTOFOLIO</div>
-        <div onclick="location.href='#About';" class="d-inline my-auto nav-elements">ABOUT</div>
-        <div onclick="location.href='#News';" class="d-inline my-auto nav-elements">NEWS</div>  
-        <div onclick="location.href='#Contact';" class="d-inline my-auto nav-elements">CONTACT</div>  
-    </div>
-  </div> 
-</div>
+<nav class="navbar navbar-expand-lg navbar-light white-bg">
+  <a class="navbar-brand" href="#">
+    <img width="45"
+           height="30"
+           alt="Logo"
+           src="data:image/png;base64,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" />
+      <p class="logo-text">KET</p>
+  </a>
 
+  <div class="col-6"></div>
+
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item nav-elements">
+        <a class="nav-link" href="#Home">HOME</a>
+      </li>
+
+      <li class="nav-item nav-elements">
+        <a class="nav-link" href="#Services">SERVICES</a>
+      </li>
+      <li class="nav-item nav-elements">
+        <a class="nav-link" href="#Portofolio">PORTOFOLIO</a>
+      </li>
+
+      <li class="nav-item nav-elements">
+        <a class="nav-link" href="#About">ABOUT</a>
+      </li>
+      
+      <li class="nav-item nav-elements">
+        <a class="nav-link" href="#News">NEWS</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <app-home></app-home>
 <app-services id="Services"></app-services>
 <app-portofolio id="Portofolio"></app-portofolio>
@@ -29,4 +43,3 @@
 <app-news id="News"></app-news>
 <app-contact id="Contact"></app-contact>
 
-  

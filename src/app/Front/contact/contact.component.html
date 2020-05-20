@@ -9,16 +9,16 @@
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend sagittis mi ac maximus. Phasellus ut purus elementum erat lobortis aliquet ut quis dui. Donec condimentum nisl a laoreet commodo.
            </div>
            <div>
-            <form action="">
-              <div class="align-center">
-                <input class="buttonn input-field input-field1" type="text" name="name" placeholder="Your name here">          
-                <input class="buttonn input-field input-field1" type="text" name="email" placeholder="Your mail here">
-              </div>
-              <div class="input2">
-                <input  class="buttonn input-field input-field2" type="text" name="message" placeholder="Your message here">
-              </div>             
-              <input class="buttonn button1"type="submit" value="Send Message">
-            </form>
+             <form [formGroup]="profileForm" (ngSubmit)="showMessage()">
+               <div class="align-center">
+                 <input class="buttonn input-field input-field1" type="text" formControlName="name" placeholder="Your name here">
+                 <input class="buttonn input-field input-field1" type="text" formControlName="email" placeholder="Your mail here">
+               </div>
+               <div class="input2">
+                 <input class="buttonn input-field input-field2" type="text" formControlName="message" placeholder="Your message here">
+               </div>
+               <input class="buttonn button1" type="submit" [disabled]="!profileForm.valid">
+             </form>
           </div>
         </div>
         <div class="col-3"></div>

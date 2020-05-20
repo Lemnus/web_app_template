@@ -2,8 +2,8 @@
     border-style: dashed;
   } */
   
-  .nav-bar{
-    height:70px;
+  .nav-bary{
+    height:75px;
   }
 
   .nav-elements{
@@ -23,4 +23,5 @@
     font-weight: 700;
     font-size: 18px;
     letter-spacing: 3px;
+    display: inline;
   }

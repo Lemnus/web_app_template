@@ -1,0 +1,175 @@
+.line1{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top:4%;
+    list-style: none;
+}
+
+.line1-item{
+    text-align:center;
+    width: 250px;
+}
+
+.line1-item *{
+    margin: auto;
+    margin-top:30px;
+}
+
+.separator{
+    width: 80px;
+    height: 0px;
+    border: 1px solid #00e1ff;
+}
+
+button{
+    font-size: 1.5em;
+    font-weight: 400;
+    border: 1px solid #252726;
+    padding: 0.4em;
+}
+
+.button-container{
+    justify-content: center;
+    padding-top: 4%;
+    margin-top: 6%;
+}
+
+.button-container button{
+    width: 22em;
+}
+
+.button-container button:hover{
+    border-color: #00e1ff ;
+}
+
+.desccontainer{
+    width: 70%;
+    margin: auto;
+    margin-top: 6%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.desccontainer img{
+    width: auto;
+    height: 40%;
+}
+
+.textcontainer{
+    margin-left: 14%;
+    width: 55%;
+    min-width: 200px;
+    justify-content: space-between;
+}
+
+.textcontainer h1{
+    font-weight: 400;
+}
+
+.textcontainer p{
+    font-size: 1.2em;
+    flex-grow: 1;
+}
+
+.button1{
+    color: #00e1ff;
+    border-color: #00e1ff;
+    padding: 0.5em 1.5em;
+    margin-top: 6%;
+}
+
+section{
+    margin: auto;   
+}
+
+.modern{    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
+.separator1{
+    margin: 2% 0%;
+    width: 20%;
+}
+
+.separator1 img{
+    height: auto;
+    width: auto;
+}
+
+.modern h1{
+    margin-top: 5%;
+}
+
+.modern p{
+    margin: 0% 10%;
+    max-width: 800px;
+}
+
+.modern img{
+    margin-top: 10%;
+    width: 55%;
+    min-width: 350px;
+    max-width: 900px;
+}
+
+.timeline{
+    width: 60%;
+    margin: auto;
+    text-align:center;
+    margin-top: 5%;
+}
+
+.left{    
+    width: 30%;
+    border-right: 3px solid gray;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-textcontainer-item{
+    text-align: end;
+    margin:15% 10%;
+    font-weight: 300;
+    height: 25%;
+}
+
+.item1{
+    margin-top: 0%;
+}
+
+.item2{
+    margin-top:5%;
+}
+
+
+    .left-textcontainer-item h6{
+        color: #00e1ff;        
+        font-size: 1.2em;
+    }
+
+.right{
+    width: 70%;
+    text-align:left;
+}
+
+.right-textcontainer-item{
+    margin-left:5%;
+    height: 25%;
+    font-weight: 300;
+}
+
+.right-textcontainer-item h6{
+    font-size: 1.2em;
+}
+
+.right-textcontainer-item a{
+    color: #00e1ff;
+    font-weight: 500;
+}

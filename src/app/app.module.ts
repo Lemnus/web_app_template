@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { ServicesComponent } from './services/services.component';
-import { PortofolioComponent } from './p/portofolio.component';
-import { AboutComponent } from './about/about.component';
-import { NewsComponent } from './news/news.component';
-import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './Front/home/home.component';
+import { ServicesComponent } from './Front/services/services.component';
+import { PortofolioComponent } from './Front/portofolio/portofolio.component';
+import { AboutComponent } from './Front/about/about.component';
+import { NewsComponent } from './Front/news/news.component';
+import { ContactComponent } from './Front/contact/contact.component';
+import { HttpClientModule } from '@angular/common/http';
+import { SendMessageService } from './Service/SendMessage/send-message.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,9 +25,11 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SendMessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
