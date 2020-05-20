@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, FormGroup } from '@angular/forms';
 import { ApiService } from 'src/app/Service/API/api.service';
+import { IMessage } from '../../Entities/message';
 import { Message } from '../../Entities/message';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -11,27 +13,26 @@ import { Message } from '../../Entities/message';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
-    
   }
 
-  ApiService: ApiService;
+  apiService=new ApiService(this.http);
   message: Message;
 
   showMessage() {
-    this.ApiService.getMessage()
-      .subscribe((data: Message) => this.message = {
+    this.apiService.getMessage()
+      .subscribe((data: IMessage) => this.message = {
         id: data['id'],
         name: data['name'],
         message: data['message']
       });
   }
 
-  profileForm = new FormGroup({
+  messageForm = new FormGroup({
     name: new FormControl(''),
-    email: new FormControl(''),
-    message: new FormControl('')
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', Validators.required)
   })
 }

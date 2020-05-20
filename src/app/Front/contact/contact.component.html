@@ -9,7 +9,7 @@
                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eleifend sagittis mi ac maximus. Phasellus ut purus elementum erat lobortis aliquet ut quis dui. Donec condimentum nisl a laoreet commodo.
            </div>
            <div>
-             <form [formGroup]="profileForm" (ngSubmit)="showMessage()">
+             <form [formGroup]="messageForm" (ngSubmit)="showMessage()">
                <div class="align-center">
                  <input class="buttonn input-field input-field1" type="text" formControlName="name" placeholder="Your name here">
                  <input class="buttonn input-field input-field1" type="text" formControlName="email" placeholder="Your mail here">
@@ -17,7 +17,7 @@
                <div class="input2">
                  <input class="buttonn input-field input-field2" type="text" formControlName="message" placeholder="Your message here">
                </div>
-               <input class="buttonn button1" type="submit" [disabled]="!profileForm.valid">
+               <input class="buttonn button1" type="submit" [disabled]="!messageForm.valid">
              </form>
           </div>
         </div>

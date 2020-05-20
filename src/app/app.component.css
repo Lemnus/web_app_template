@@ -25,3 +25,8 @@
     letter-spacing: 3px;
     display: inline;
   }
+
+  .logo{
+    padding-left:10% ;
+    width: 20%;
+  }
