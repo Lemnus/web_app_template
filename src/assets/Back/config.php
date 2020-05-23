@@ -1,14 +1,21 @@
-     <?php
-      $servername = "localhost";
-      $username = "root";
-      $password = "admin";
-      $db_name = "ket_database";
+<?php
 
-      // Create connection
-      $conn = new mysqli($servername, $username, $password, $db_name);
+function connect()
+{
+  $servername = "localhost";
+  $username = "root";
+  $password = "admin";
+  $db_name = "ket";
 
-      // Check connection
-      if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-      }
-     ?>
+  $connect = mysqli_connect($servername, $username, $password, $db_name);
+
+  if (mysqli_connect_errno($connect)) {
+    die("Failed to connect:" . mysqli_connect_error());
+  }
+
+  mysqli_set_charset($connect, "utf8");
+
+  return $connect;
+}
+
+$con = connect();
