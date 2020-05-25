@@ -3,6 +3,12 @@
         <div class="center">
             <h5>If you want to hear more stories, subscribe to our newsletter</h5>
             <button class="button">Subscribe</button>
+            <form [formGroup]="subscribeForm" (ngSubmit)="subscribe()">
+                <div class="align-center">
+                  <input type="text" formControlName="email" placeholder="Your email here">
+                </div>
+                <input type="submit" [disabled]="!subscribeForm.valid">
+              </form>
         </div>
     </div>
 </div>

@@ -3,10 +3,8 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\Back",
     "\\src\\assets",
     "\\src\\assets\\Images"
   ],
-  "SelectedNode": "\\src\\app\\Back\\getMsg.php",
   "PreviewInSolutionExplorer": false
 }

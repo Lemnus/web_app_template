@@ -21,7 +21,9 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/web.config",
+              "src/cacert.pem"
             ],
             "styles": [
               "src/styles.css"

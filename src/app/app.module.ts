@@ -11,8 +11,12 @@ import { NewsComponent } from './Front/news/news.component';
 import { ContactComponent } from './Front/contact/contact.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { SendMessageService } from './Service/SendMessage/send-message.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SupersecretComponent } from './Front/supersecret/supersecret.component';
+import { CanActivateGuardGuard } from './Guard/can-activate-guard.guard';
+import { AuthServiceService } from './Service/auth-service.service';
+import { LoginComponent } from './Front/login/login.component';
+import { JwtModule } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -22,15 +26,26 @@ import { ReactiveFormsModule } from '@angular/forms';
     PortofolioComponent,
     AboutComponent,
     NewsComponent,
-    ContactComponent
+    ContactComponent,
+    SupersecretComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: function  tokenGetter() {
+          return localStorage.getItem('access_token');}
+      }
+    })
   ],
-  providers: [SendMessageService],
+  providers: [
+    AuthServiceService,
+    CanActivateGuardGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

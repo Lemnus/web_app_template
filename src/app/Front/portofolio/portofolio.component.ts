@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from '@angular/common/http';
+import { ApiService } from 'src/app/Service/API/api.service';
 
 @Component({
   selector: 'app-portofolio',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortofolioComponent implements OnInit {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
+    //this.login();
   }
+
+  apiService=new ApiService(this.httpClient);
+
+  // login() {
+  //   this.apiService.login()
+  //   .subscribe();
+  // }
 
 }
