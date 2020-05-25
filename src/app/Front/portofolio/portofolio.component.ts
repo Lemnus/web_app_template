@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams, HttpErrorResponse } from '@angular/common/http';
-import { ApiService } from 'src/app/Service/API/api.service';
 
 @Component({
   selector: 'app-portofolio',
@@ -9,17 +7,29 @@ import { ApiService } from 'src/app/Service/API/api.service';
 })
 export class PortofolioComponent implements OnInit {
 
-  constructor(private httpClient: HttpClient) { }
+  public items = [1,2,3,4,5];
+
+  showControls:boolean;
+
+  constructor() {}
 
   ngOnInit(): void {
-    //this.login();
   }
 
-  apiService=new ApiService(this.httpClient);
+ next(){
+    var num:number = 0; 
+    var i:number; 
+    var temp:number=this.items[0];
+    for(i = num;i<5;i++) {
+      this.items[i]=this.items[i+1];
+    }
+    this.items[4]=temp;
+  }
 
-  // login() {
-  //   this.apiService.login()
-  //   .subscribe();
-  // }
-
+  prev(){
+    var i:number; 
+    for(i=1;i<5;i++){
+      this.next();
+    }
+  }
 }

@@ -16,6 +16,8 @@ export class NewsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showControls:boolean;
+
   apiService=new ApiService(this.httpClient);
   subscriber: Subscriber; 
 

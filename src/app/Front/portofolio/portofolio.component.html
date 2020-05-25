@@ -1,1 +1,29 @@
-<p>portofolio works!</p>
+<div class="row1">
+    <div class="col1">
+        <h2>Our Portofolio</h2>
+        <div class="underscore"></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin a arcu pulvinar, varius nulla ac, malesuada nulla. Vivamus elementum egestas sem, eget tempor enim interdum eget. </p>
+        <ul class="flex-container">
+            <li class="flex-item">All</li>
+            <li class="flex-item">WEB</li>
+            <li class="flex-item">PHOTOGRAPHY</li>
+            <li class="flex-item">GRAPHIC LESSONS</li>
+        </ul> 
+    </div>
+</div>
+<div class="row2">
+    <section class="carousel-wrapper">
+        <ul class="carousel-container">
+          <li *ngFor="let item of items; first as f" class="carousel-element" [ngClass]="{'first': f}"> 
+            <div class="carousel-text" (click)="showControls=!showControls">{{item}}</div>
+            <h4>AWESOME PHOTO</h4>
+            <div class="underscore underscore2"></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit adipiscing elit. </p> 
+          </li>
+        </ul>
+        <div *ngIf="showControls" class="controls">
+          <button (click)="next()">Next</button>
+          <button (click)="prev()">Previous</button>
+        </div>
+      </section>
+</div>
