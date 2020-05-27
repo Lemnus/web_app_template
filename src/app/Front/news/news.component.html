@@ -1,14 +1,26 @@
+<div class="center">
+  <div class="roww1">
+    <h1>WHAT CLIENTS SAY</h1>
+    <div class="separator"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim, nibh et placerat fermentum, nisi metus ultricies velit, nec feugiat erat dui ac nunc.</p>
+  </div>
+  <div class="input-container">
+      <h2>NUMELE{{name}}</h2>
+      <h4>Graphic Designer</h4>
+      <p>"MESAR{{message}}."</p>
+  </div>
+</div>
 <div class="row header lighterdark-bg">
     <div class="col-12 middle">
-        <div class="center">
+        <div class="center subscribe-container">
             <h5>If you want to hear more stories, subscribe to our newsletter</h5>
             <button class="button" (click)="showControls=!showControls">Subscribe</button>
             <form [formGroup]="subscribeForm" (ngSubmit)="subscribe()" *ngIf="showControls">
-                <div class="align-center">
+                <div class="input-field">
                   <input type="text" formControlName="email" placeholder="Your email here">
                 </div>
                 <input type="submit" [disabled]="!subscribeForm.valid">
-              </form>
+            </form>
         </div>
     </div>
 </div>

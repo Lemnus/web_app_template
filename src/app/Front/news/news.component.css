@@ -1,15 +1,47 @@
 .center{
-    margin: auto;
     width: 70%;
     display: flex;
     flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
     margin-bottom: 40px;
+}
+
+.roww1 p{
+    width: 60%;
+    min-width: 200px;
+    margin:auto;
+}
+
+.roww1 h1{
+    font-weight: 400;
+}
+
+.input-container{
+    border: 1px solid gray;
+    width: 40%;
+    min-width: 250px;
+    margin: 60px auto;
+}
+
+.input-container h2{
+    font-weight: 300;
+    margin-top: 40px;
+}
+
+.input-container h4{
+    color: #00e1ff;
+}
+
+.input-container p{
+    margin-top: 40px;
 }
 
 .center button{
     margin: auto;
-    margin-top: 10px;
+    margin-top: 30px;
     padding:10px 55px;    
     color: white;
     background-color: #252726;
@@ -18,4 +50,54 @@
 
 .lighterdark-bg{
     background-color: #252726;
+}
+
+.separator{
+    width: 30%;
+    min-width: 200px;
+    border: 1px solid #00e1ff;
+    margin: 15px auto;
+}
+
+.subscribe-container{
+    margin-top: 70px;
+}
+
+.subscribe-container h5{
+    color: white;
+    font-weight: 400;
+}
+
+.subscribe-container form{
+    margin-top: 20px;
+}
+
+.subscribe-container form input{
+    margin-top: 20px;
+}
+
+::placeholder {
+    color: white;
+    background-color: #252726;
+    border: none;
+    opacity: 1;
+    padding: 2em;
+}
+
+.input-field{    
+    border: none;
+    margin:auto;
+}
+
+.input-field input[type=text]{
+    border: 3px solid #252726;
+    border-bottom: 1px solid white;
+    padding:0px;
+}
+
+ input[type=submit]{
+    border: 1px solid #00e1ff;
+    color: white;
+    background-color: #252726;
+    padding:1em 3em;
 }

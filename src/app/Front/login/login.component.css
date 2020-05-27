@@ -1,0 +1,28 @@
+.f-container{
+    background-color: #252726;
+    padding: 30px;
+}
+
+*{
+    background-color: #252726;
+    color:white;
+}
+
+input[type=text], input[type=submit]{
+    margin:10px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+input[type=submit], button{
+    border:1px solid #00e1ff;
+}
+
+::placeholder{
+    opacity: 1;
+    color: white;
+}
+
+button{
+    margin:10px;
+}

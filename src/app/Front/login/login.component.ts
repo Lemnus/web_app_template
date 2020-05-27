@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     this.login_attempt=this.loginForm.value;
     this.apiService.login(this.login_attempt).subscribe(res => {
       localStorage.setItem('access_token', res.access_token);
+      window.location.assign("supersecret");
     });
   }
 
