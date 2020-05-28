@@ -17,8 +17,10 @@ export class ApiService {
     return this.httpClient.post<{access_token: string}>('assets/Back/login.php', login_attempt);
   }
 
-  public getMessage() {
-    return this.httpClient.get<Message>('assets/Back/getMsg.php');
+  public getMessage(term: number) {
+    const options = term ?
+   { params: new HttpParams().set('id', term.toString()) } : {};
+    return this.httpClient.get<Message>('assets/Back/getMsg.php', options);
   }
 
   public subscribe(subscriber: Subscriber){

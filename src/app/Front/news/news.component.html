@@ -4,10 +4,10 @@
     <div class="separator"></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dignissim, nibh et placerat fermentum, nisi metus ultricies velit, nec feugiat erat dui ac nunc.</p>
   </div>
-  <div class="input-container">
-      <h2>NUMELE{{name}}</h2>
+  <div class="input-container" (click)="getMsg()">
+      <h2>{{message.name}}</h2>
       <h4>Graphic Designer</h4>
-      <p>"MESAR{{message}}."</p>
+      <p>"{{message.message}}."</p>
   </div>
 </div>
 <div class="row header lighterdark-bg">

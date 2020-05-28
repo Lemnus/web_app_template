@@ -23,14 +23,14 @@ export class ContactComponent implements OnInit {
 
   
 
-  showMessage() {
-    this.apiService.getMessage()
-      .subscribe((data: IMessage) => this.message = {
-        id: data['id'],
-        name: data['name'],
-        message: data['message']
-      });
-  }
+  // showMessage() {
+  //   this.apiService.getMessage()
+  //     .subscribe((data: IMessage) => this.message = {
+  //       id: data['id'],
+  //       name: data['name'],
+  //       message: data['message']
+  //     });
+  // }
 
   sendMessage() {
     this.message=this.messageForm.value;
